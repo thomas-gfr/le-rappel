@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const ROUTE: Routes = [
+    {
+        path: 'connexion',
+        // component: SigninComponent,
+    },
+    {
+        path: '',
+        loadChildren: () => import('./pages/connected/connected.module').then(m => m.ConnectedModule)
+    },
+    {
+        path: '**',
+        redirectTo: '',
+    }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(ROUTE)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
