@@ -1,7 +1,12 @@
-<div>
-    navbar
-</div>
 
-<div>
-    <router-outlet></router-outlet>
+<div class="container d-flex flex-row">
+  <p-sidebar class="sidenav" (showCloseIcon)="false" [baseZIndex]="10000" [(visible)]="sidebarVisible"  position="left" styleClass="w-30rem">
+    <app-sidenav></app-sidenav>
+  </p-sidebar>
+
+  <p-button *ngIf="!sidebarVisible" (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
+
+  <div id="main" >
+      <router-outlet></router-outlet>
+  </div>
 </div>

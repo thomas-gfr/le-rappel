@@ -9,10 +9,10 @@ const ROUTE: Routes = [
     component: ConnectedComponent,
     // canActivate: [AuthGuard],
     children: [
-      // {
-      //   path: '',
-      //   loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-      // },
+      {
+        path: '',
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
       // {
       //   path: 'sessions',
       //   data: {

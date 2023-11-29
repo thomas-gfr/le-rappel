@@ -15,7 +15,7 @@ export class ConnectedComponent implements OnInit, OnDestroy {
     // private _time: NodeJS.Timeout;
     // private _interval: NodeJS.Timeout;
     private _routeSub: Subscription;
-
+    sidebarVisible: boolean = false;
     constructor(
         // private readonly _authService: AuthService,
         // private readonly _loggedUserService: LoggedUserService,
